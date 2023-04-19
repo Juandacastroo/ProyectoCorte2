@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+	body{
+	
+		display: flex;
+		flex-direction: column;
+		justify-content: center; 
+		align-items:center;
+	
+		background-image: url("../img/unbosque.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		font-family: 'Secular One';
+	}
+		
+	.contenedor{
+	
+		font-family: 'Secular One';
+		height: 50vh;
+		width: 60vh;
+		margin: 10%;
+			
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around; 
+		align-items:center;
+		
+		background-image: linear-gradient(rgba(5,7,12,0.50),rgba(5,7,12,0.50)), 
+		url("../img/img01.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	
+	.contenedor2{
+	
+		font-family: 'Secular One';
+		height: 200vh;
+		width: 60vh;
+		margin: 10%;
+			
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around; 
+		align-items:center;
+		
+		background-image: linear-gradient(rgba(5,7,12,0.50),rgba(5,7,12,0.50)), 
+		url("../img/img01.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	
+	.titulos{
+		font-size: 190%;
+		background-color:#bdffd9;
+    	color: #001409;
+    	border: none;
+    	padding: 10px 20px;
+    	border-radius: 2px;
+    	opacity: 50%;
+	}
+	
+	.titulos2{
+		font-size: 130%;
+		width: 80%;
+		background-color:#c3c3c1;
+    	color: #001409;
+    	border: none;
+    	padding: 10px 20px;
+    	border-radius: 2px;
+    	opacity: 50%;
+	}
+	
+	.infoimp{
+		font-size: 100%;
+		width: 80%;
+		background-color:#ffd4d1;
+    	color: #001409;
+    	border: none;
+    	padding: 10px 20px;
+    	border-radius: 2px;
+    	opacity: 50%;
+	}
+	
+	.desplegables{
+		background-color:#c3c3c1;
+    	color: #001409;
+    	border: aqua;
+    	padding: 10px 20px;
+    	border-radius: 2px;
+    	opacity: 50%;
+    	width: 80%;
+	}
+	
+	.ingresar{
+/* 		font-size: 100%; */
+		background-color:#c3c3c1;
+    	color: #001409;
+    	border: none;
+    	padding: 10px 20px;
+    	border-radius: 2px;
+    	opacity: 50%;
+		width: 80%;
+	}
+	
+	.botones{
+		font-size: 130%;
+		background-color: #00d65f ;
+    	color: #000a05;
+    	border: none;
+    	padding: 10px 20px;
+    	border-radius: 5px;
+    	transition: background-color 0.3s;
+	}
+	
+	.botones:hover{
+		background-color: #004720;
+	}
+	
+	.formulario{
+		display: flex;
+		flex-direction: column;
+		justify-content: center; 
+		align-items: center;
+	}
+	
