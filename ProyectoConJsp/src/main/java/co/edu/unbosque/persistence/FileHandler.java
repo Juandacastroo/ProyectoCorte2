@@ -15,25 +15,28 @@ public class FileHandler {
 	private BufferedWriter bWriter;
 	private ArrayList<String> auxList;
 	private ArrayList<EstudianteDto> lista;
+	private File f;
 	private Scanner sc;
+	private String RUTA= "estudiantes.csv";
 
 	public FileHandler() {
-		this.auxList = new ArrayList<>();
 		this.lista = new ArrayList<>();
+		this.auxList = new ArrayList<>();
+		this.f = new File(RUTA);
 	}
 
-	public void escribirDatos(ArrayList<EstudianteDto> lista, File file) throws IOException {
-		int prueba = lista.size();
-		this.writer = new FileWriter(file, true);
+	public void escribirDatos(ArrayList<EstudianteDto> lista) throws IOException {
+		
+		this.writer = new FileWriter(f, false);
 		for (int i = 0; i < lista.size(); i++) {
 			this.writer.write(lista.get(i).toString() + "\n");
 		}
 		this.writer.close();
 	}
 
-	public void leerDatos(File file) throws IOException {
+	public ArrayList<EstudianteDto> leerDatos() throws IOException {
 		try {
-			this.sc = new Scanner(new File("estudiantes.csv"));
+			this.sc = new Scanner(f);
 			while(this.sc.hasNextLine()) {
 				this.auxList.add(this.sc.nextLine());
 			}
@@ -47,6 +50,7 @@ public class FileHandler {
 			e.printStackTrace();
 			System.out.println("Fallo al leer el archivo");
 		}
+		return this.lista;
 		
 	}
 

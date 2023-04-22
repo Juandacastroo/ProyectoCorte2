@@ -11,7 +11,6 @@ public class EstudianteDao {
 
 	private ArrayList<EstudianteDto> lista;
 	private FileHandler archivo;
-	private File file = new File("estudiantes.csv");
 	
 
 	public EstudianteDao() {
@@ -25,7 +24,7 @@ public class EstudianteDao {
 		this.lista.add(new EstudianteDto(nombre, colegio, fecha, carrera, homologado, estrato, cedula));
 
 		try {
-			this.archivo.escribirDatos(lista, file);
+			this.archivo.escribirDatos(lista);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -54,6 +53,12 @@ public class EstudianteDao {
 			this.lista.get(aux2).setCarrera(carrera);
 			this.lista.get(aux2).setEstrato(estrato);
 			this.lista.get(aux2).setHomologado(homologado);
+			try {
+				this.archivo.escribirDatos(this.lista);
+			} catch (IOException e) {
+				e.printStackTrace();
+				return false;
+			}
 			return true;
 		} catch (Exception e) {
 			return false;
@@ -81,11 +86,9 @@ public class EstudianteDao {
 		for (int i = 0; i < this.lista.size(); i++) {
 			if (this.lista.get(i).getCedula() == cedula) {
 				return i + "";
-			} else {
-				return "No existe";
 			}
 		}
-		return "No entró a ninguno";
+		return "No Existe";
 
 	}
 
@@ -104,13 +107,4 @@ public class EstudianteDao {
 	public void setArchivo(FileHandler archivo) {
 		this.archivo = archivo;
 	}
-
-	public File getFile() {
-		return file;
-	}
-
-	public void setFile(File file) {
-		this.file = file;
-	}
-	
 }

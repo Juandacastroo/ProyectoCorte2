@@ -32,9 +32,7 @@ public class Controller extends HttpServlet {
 	
 	public Controller() {
 		try {
-			this.dao.getArchivo().leerDatos(this.dao.getFile());
-			System.out.println("entro");
-			this.dao.setLista(this.dao.getArchivo().getLista());
+			this.dao.setLista(this.dao.getArchivo().leerDatos());
 			
 		} catch (IOException e) {
 			e.printStackTrace();
