@@ -25,7 +25,7 @@
 	
 		<h1 class="titulos">Registrarse</h1>
 		
-		<form id="formulario"class= "formulario" action="http://localhost:8080/ProyectoConJsp/ingresarPersona" method="POST">
+		<form enctype="multipart/form-data" id="formulario"class= "formulario" action="http://localhost:8080/ProyectoConJsp/ingresarPersona" method="POST">
 			
 			<h5 class="titulos2 text-center">Ingrese su nombre completo</h5>
 			<input type="text" class="ingresar text-center" id="input" name="nombre" placeholder=" " min="1" max="125" required> 
@@ -120,7 +120,7 @@
 			
 			<br>
 			
-			<input class="desplegables" type="file" name="imagen" accept="image/*" required>
+			<input class="desplegables" type="file" name="file" accept="image/*" required>
 			
 			<div class="contenedor3">
 		<input class="botones" type="submit" name="registrarse"   value="registrarse">

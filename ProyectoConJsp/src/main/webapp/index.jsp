@@ -31,6 +31,5 @@
 			<input class="botones" type="submit" value="Registrar estudiante" name="registrarse"></input>
 		</form>
 	</div>
-	
 </body>
 </html>

@@ -44,7 +44,7 @@ public class FileHandler {
 			for(int i= 0;i<this.auxList.size();i++) {
 				String datos = this.auxList.get(i);
 				String[] a = datos.split(";");
-				this.lista.add(new EstudianteDto(a[0], a[1], a[2], a[3], a[4], Integer.parseInt(a[5]), Long.parseLong(a[6])));
+				this.lista.add(new EstudianteDto(a[0], a[1], a[2], a[3], a[4], Integer.parseInt(a[5]), Long.parseLong(a[6]),a[7]));
 			}
 		}catch (Exception e) {
 			e.printStackTrace();

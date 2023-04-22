@@ -4,12 +4,11 @@ public class EstudianteDto {
 	private String nombre, colegio, fecha, carrera,homologado;
 	private int estrato;
 	private long cedula;
-	
+	private String imagen;
 	
 
 	public EstudianteDto(String nombre, String colegio, String fecha, String carrera, String homologado, int estrato,
-			long cedula) {
-		super();
+			long cedula, String imagen) {
 		this.nombre = nombre;
 		this.colegio = colegio;
 		this.fecha = fecha;
@@ -17,6 +16,7 @@ public class EstudianteDto {
 		this.homologado = homologado;
 		this.estrato = estrato;
 		this.cedula = cedula;
+		this.imagen = imagen;
 	}
 
 
@@ -103,11 +103,24 @@ public class EstudianteDto {
 		this.cedula = cedula;
 	}
 	
+	
+	public String getImagen() {
+		return imagen;
+	}
+
+
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+
+
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
 		return 
-				 nombre+";"+colegio+";"+fecha+";"+carrera+";"+homologado+";"+estrato+";"+cedula;
+				 nombre+";"+colegio+";"+fecha+";"+carrera+";"+homologado+";"+estrato+";"+cedula+";"+imagen;
 	}
 	
 }
